@@ -15,8 +15,19 @@
 <div class="container">
 
     <h4 class="header-title mt-5 mb-3 p-3 mb-2 bg-info text-white">Form Notifikasi</h4>
-    <h5 class="header-title mb- pt-2 pb-2 mb-2 ">Field Title Notifikasi</h5>
+
     <form action="pushFCM.php" method="post" data-parsley-validate="" novalidate="">
+        <h5 class="header-title mb-0 pt-2 pb-2 mb-2 ">Field Title Notifikasi</h5>
+
+        <h5 class="header-title mb-0 pt-3 ">Notifikasi Untuk :</h5>
+        <select class="form-control mb-3 mt-3 " name="rute">
+            <option>-- pilih bagian untuk notifikasi --</option>
+            <option name="rute">for Home Page</option>
+            <option name="rute">for Notification Page</option>
+            <option name="rute">for kostumisasi layout Page</option>
+
+        </select>
+
         <div class="form-group">
             <label for="titleNotifikasi">Title Notifikasi*</label>
             <input type="text" name="titleNotifikasi" parsley-trigger="change" required="" placeholder="Masukkan title notifikasi..." class="form-control" id="titleNotifikasi">
@@ -26,7 +37,7 @@
             <input type="text" name="subNotifikasi" parsley-trigger="change" required="" placeholder="Masukkan subtitle notifikasi..." class="form-control" id="subNotifikasi">
         </div>
 
-        <h5 class="header-title mb- pt-2 pb-2 mb-2 ">Field Data Notifikasi</h5>
+        <h5 class="header-title mb-0 pt-2 pb-2 mb-2 ">Field Data Notifikasi</h5>
         <div class="form-group">
             <label for="isiNotifkasi">Isi Notifikasi*</label>
             <input id="isiNotifkasi" name="isiNotifikasi" type="text" placeholder="Masukkan data notifikasi..." required="" class="form-control">
@@ -41,6 +52,8 @@
         </div>
     </form>
 </div>
+
+
 
 
 </body>

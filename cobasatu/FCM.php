@@ -14,12 +14,13 @@ class FCM
 
 //    send push notification
 
-    public function send_notification($registration_ids, $notification){
+    public function send_notification($registration_ids, $notification,$dataNotification){
 //        url dari send notifcation
         $url = 'https://fcm.googleapis.com/fcm/send';
         $isifields = array(
             'to' => $registration_ids,
-            'notification' => $notification
+            'notification' => $notification,
+            'data'=>$dataNotification
         );
 
 //        firebase api key
