@@ -12,20 +12,18 @@ include_once 'FCM.php';
 $titNotif = $_POST['titleNotifikasi'];
 //$subNotif = $_POST['subNotifikasi'];
 $isiNotif = $_POST['isiNotifikasi'];
-$rute = $_POST['rute'];
-
+$rute = '/'.$_POST['rute'];
 
 $notification = array();
 $arrData = array(
     'click_action'=>'FLUTTER_NOTIFICATION_CLICK',
-    'rute'=>$rute,
-    'judul' => 'test pertama kita'
+    'status'=>$rute,
+    'judul' => 'test pertama kita',
+    'sound' => 'default',
 );
 $arrNotification =array(
     'body' => $isiNotif,
     'title' => $titNotif,
-    'sound' => 'default',
-    'type' => '1'
 );
 
 $fcm = new FCM();
