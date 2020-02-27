@@ -43,6 +43,8 @@ class FCM
         $result = curl_exec($curl);
         if ($result == FALSE){
             die('Curl Failed : '.curl_error($curl));
+        }else{
+//            die('Curl Berhasil');
         }
         curl_close($curl);
     }
